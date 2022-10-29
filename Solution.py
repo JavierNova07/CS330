@@ -4,11 +4,10 @@ def main():
     lock='232364'
     exitOut=70
     print("The system is locked")
-    #for number in range(0,10):
     sw=True
     while sw:
         try:
-            number=int(input("Enter the code to unlock or lock the system, to exit press q "))
+            number=int(input("Enter the code to unlock or lock the system, to exit press 70 "))
             if unlock in (str(number)):
                 print("System unlocked")
             elif lock in (str(number)):
