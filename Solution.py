@@ -2,24 +2,24 @@ def main():
     number=0
     unlock='232361'
     lock='232364'
-    exitOut=70
+    exitOut='000000'
     print("The system is locked")
     sw=True
     while sw:
         try:
-            number=str(input("Enter the code to unlock or lock the system, to exit press 70 "))
+            number=input("Enter the code to unlock or lock the system, to exit press 000000 ")
             validatedInput=checkInput(number)
-            if validatedInput==True:
+            if validatedInput:
                 if unlock in str(number):
                     print("System unlocked")
-                elif validatedInput and lock in str(number):
+                elif lock in str(number):
                     print("System locked")
-                elif validatedInput and number==exitOut:
+                elif exitOut in (str(number)):
                     sw=False
         except ValueError:
             print("Must be an integer and between 0-9, to exit enter 70")
-''''def checkInput(digits):
-    #counter=0
+def checkInput(digits):
+    counter=0
     if digits.isnumeric():
         for digit in digits:
             counter+=1
@@ -28,7 +28,7 @@ def main():
         else:
             return False
     else:
-        return False'''
+        return False
     
       
   
